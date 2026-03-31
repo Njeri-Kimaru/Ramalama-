@@ -20,13 +20,8 @@ It is GPU optimizedand accelerates performance.
 It is compatible with llama.cpp, openvino, vLLM, whisper.cpp and manymore.
 
 ## Repo structure
-|
-|
-|
-|
-|
-
-
+|--Screenshots
+|--README.md
 
 ## Installing ramalama
 Ramalama is easy to install.
@@ -64,6 +59,10 @@ Here are some of modelscope's model I used;
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8htkg8xp4pzn9031mp1f.png)
 
 ## 4. OCI registries
+I used the github container registry(ghcr.io)
+In github I had to login first then get an authentication token.
+Afterwards, I converted a model then accessed it using the ghcr.io
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/om5vi2ea2tvkkburyrig.png)
 
 ## Why these transports
 - I used ollama because it is easy and quite fast.
@@ -73,7 +72,7 @@ Here are some of modelscope's model I used;
 
 ## Comparing the different types of models and transports.
 #### 1. Ollama and the models I used using Ollama
-In Ollama I used 
+In Ollama, I used granite model  
 
 #### 2. Huggingface and models I used using huggingface
 
