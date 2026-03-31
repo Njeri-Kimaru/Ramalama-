@@ -1,3 +1,4 @@
+# RUNNING RAMALAMA
 # Table of contents
 1. [What is ramalama](What-is-ramalama)
 2. [Repo structure](Repo-structure)
