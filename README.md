@@ -4,7 +4,7 @@
 2. [Repo structure](Repo-structure)
 3. [Installing ramalama](Installing-ramalama)
 4. [Ollama](Ollama)
-5. [Huggingface]()Huggingface
+5. [Huggingface](Huggingface)
 6. [modelscope](modelscope)
 7. [OCI registries](OCI-registries)
 8. [Why these transports](Why-these-transports)
@@ -74,22 +74,22 @@ Afterwards, I converted a model then accessed it using the ghcr.io
 ## Comparing the different types of models and transports.
 #### 1. Ollama and the models I used using Ollama
 Ollama generally, was the easiest to use and it was so quick with no complications compared to other transports.
-In Ollama, I used granite model and it doesn't take that much space compared to other models.
-The other models I used were mistral, phi4 and llama:scout, They were all taking a lot of space especially the phi4
+In Ollama, I used granite model and it doesn't take that much space compared to other models but it didn't give the correct answers.
+The other models I used were mistral, phi4 and llama:scout, They were all taking a lot of space especially the llama4 which had 63gb but I didn't use them because of space constraints.
 
 #### 2. Huggingface and models I used using huggingface
 Generally, huggingface was good but some AI models like meta-llama/llama-scout were gated and required logging in and authentication.
-The models I used were instructlab/granite-7B-lab which worked really well but was taking up a lot of space other models I used were qwen2.5 which was taking up really little space and microsoft/phi-3 which was taking up a lot of space .
+The models I used were instructlab/granite-7B-lab and microsoft/phi-3 which were taking up a lot of space. qwen2.5 which was taking up really little space. None of these models gave the correct answers.
 
 #### 3. MOdelscope and models I used using modelscope
 Modelscope had no complications it's almost as easy as ollama.
 The models I used using this transport were; deepseek and qwen2.5. Deepseek is lightweight but not as much as qwen2.5
-They both ran really well.
+They both didn't give correct answers.
 
 #### 4. OCI registries and models used using OCI transport registry
 The OCI registries are really complex to run with ramalama.
 The only succeful one was the github oci (ghcr.io) where I used the mistral AI model. I had to first get an authentication token to convert the model then pull it from github.
-After pulling the model it ran really well.
+After pulling the model it ran really well and gave the correct answers.
 
 ## Does ramalama make AI boring?
 Definitely, but it reduces workload. I have used AI models before which required a lot of configurations and most wouldn't run unless connected a remote server via an API but in ramalama it just needs to pull the model the run and it just works.It makes it really hence my opinion as a developer is that it makes AI boring.
