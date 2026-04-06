@@ -27,6 +27,12 @@ It is compatible with llama.cpp, openvino, vLLM, whisper.cpp and manymore.
 ## Installing ramalama
 Ramalama is easy to install.
 After installing check the version you are using.
+```
+sudo dnf pip install python3-ramalama
+```
+```
+ramalama version
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tfalaol8rn6zay0lpkwr.png)
 
@@ -34,28 +40,47 @@ Ramalama supports multiple model registries(transports);
 ### 1. Ollama
 It is the quickest and easiest registry.
 Here are a few AI models i ran using ollama.
+```
+ramalama run granite moe3
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kodanaa77q5ei0cm70nb.png)
 
 
+```
+ramalama run ollama://llama4:scout
+```
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yz2d215ai9bkc9d7p4hy.png)
 
 ### 2. Huggingface
 Some hugging face model require one to login.
 Here are some that don't require logging in:
+```
+ramalama run huggingface://instructlab/granite-7b-lab-Q4_K_M.gguf
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5ulbhr6gpzj1lj79e8l8.png)
 
+```
+ramalama run huggingface://microsoft/Phi-3-mini-4k-instruct-q4.gguf
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cascyyedeihsgbmb6jjd.png)
 
 ### 3. Modelscope
 Model scope worked quite well too.
 but I had to upgrade ramalama's version.
+```
+sudo dnf upgrade ramalama
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8oz9h8y8onpduc1ax8rp.png)
 
 Here are some of modelscope's model I used;
+Here are some of modelscope's model I used;
+```
+ramalama run modelscope://Qwen/Qwen2.5-7B-Instruct-GGUF/qwen2.5-7b-instruct-q4_k_m.gguf
+```
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8htkg8xp4pzn9031mp1f.png)
 
@@ -63,6 +88,13 @@ Here are some of modelscope's model I used;
 I used the github container registry(ghcr.io)
 In github I had to login first then get an authentication token.
 Afterwards, I converted a model then accessed it using the ghcr.io
+Afterwards, I pushed a model then accessed using the ghcr.io
+```
+ramalama convert ollama://mistral oci://ghcr.io/njeri-kimaru/mistral:gguf
+```
+```
+ramalama run oci://ghcr.io/njeri-kimaru/mistral:gguf
+```
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/om5vi2ea2tvkkburyrig.png)
 
 ## Why these transports
